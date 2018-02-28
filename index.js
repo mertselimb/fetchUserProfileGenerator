@@ -13,7 +13,7 @@ btn.addEventListener("click", function () {
             return response.json()
         })
         .then(function (data) {
-            avatar.src = data.results["0"].picture.thumbnail;
+            avatar.src = data.results["0"].picture.medium;
             fullname.textContent = capitalizeFirstLetter(data.results["0"].name.first) + " " + capitalizeFirstLetter(data.results["0"].name.last);
             username.textContent = data.results["0"].login.username;
             email.textContent = data.results["0"].email;
